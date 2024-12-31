@@ -36,7 +36,7 @@ npm install
 npm start
 ```
 
-#### **1.2 Run Backend**
+#### **1.3 Run Backend**
 
 Execute the following commands to launch backend server
 

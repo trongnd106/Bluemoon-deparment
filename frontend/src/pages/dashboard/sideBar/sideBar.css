@@ -217,7 +217,9 @@ body {
 }
 
 .sidebar .profile_details .name_role {
-    margin-left: -40px;
+    /* margin-right: 40px; */
+    position: relative;
+    left: 9px;
 }
 
 .sidebar .profile_details .name {
@@ -253,4 +255,8 @@ body {
   background-color: #fff;
   color: #11101d;
   border-radius: 50%;
+}
+
+#accountForm{
+  cursor: pointer;
 }

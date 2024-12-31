@@ -29,11 +29,14 @@ export default function VehicleForm({ vehicle }: any) {
 
     try {
       console.log(formValues.apartmentId);
-      const response = await axios.delete(`http://localhost:8080/api/v1/vehicles/${formValues.apartmentId}`, {
-        data: { id: formValues.id }, // Payload gửi kèm
-        headers: { "Content-Type": "application/json" }, // Đảm bảo header đúng
-      });
-      
+      const response = await axios.delete(
+        `http://localhost:8080/api/v1/vehicles/${formValues.apartmentId}`,
+        {
+          data: { id: formValues.id }, // Payload gửi kèm
+          headers: { "Content-Type": "application/json" }, // Đảm bảo header đúng
+        }
+      );
+
       // console.log(response.data);
       setTimeout(() => {
         window.location.reload();
@@ -51,14 +54,15 @@ export default function VehicleForm({ vehicle }: any) {
     const vehicleData = {
       apartmentId: formValues.apartmentId,
       id: formValues.id,
-      category: formValues.category
+      category: formValues.category,
     };
 
     console.log(vehicleData);
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/vehicles", vehicleData
+        "http://localhost:8080/api/v1/vehicles",
+        vehicleData
       );
       setTimeout(() => {
         window.location.reload();
@@ -71,7 +75,7 @@ export default function VehicleForm({ vehicle }: any) {
   };
 
   return (
-    <Form width="400px" onSubmit={handleSubmit}>
+    <Form width="400px">
       <Form.Fields>
         <FormField>
           <FormField.Label label={"Room"} />
@@ -82,16 +86,6 @@ export default function VehicleForm({ vehicle }: any) {
             onChange={handleChange}
           />
         </FormField>
-
-        {/* <FormField>
-          <FormField.Label label={"Date"} />
-          <FormField.Input
-            id="ownerName"
-            type="text"
-            value={formValues.registerDate}
-            onChange={handleChange}
-          />
-        </FormField> */}
 
         <FormField>
           <FormField.Label label={"Number"} />
@@ -129,7 +123,12 @@ export default function VehicleForm({ vehicle }: any) {
         </Form.Buttons>
       ) : (
         <Form.Buttons>
-          <Button size="medium" variation="primary">
+          <Button
+            onClick={handleSubmit}
+            type="button"
+            size="medium"
+            variation="primary"
+          >
             Add
             <span>
               <HiOutlinePlusCircle />
