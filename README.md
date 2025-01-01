@@ -31,7 +31,7 @@
 Execute the following commands to launch frontend interface
 
 ```bash
-cd frontend
+cd department-manager-frontend
 npm install
 npm start
 ```
@@ -41,17 +41,17 @@ npm start
 Execute the following commands to launch backend server
 
 ```bash
-cd backend
+cd department-manager-backend
 mvn install
 mvn spring-boot:run
 ```
 
 ### **2. Run Docker**
 
-Build and boot the entire system
+Build and boot the entire system. Run docker container in the background mode
 
 ```bash
-docker-compose up --build
+docker-compose up -d --build
 ```
 
 Stop all containers
