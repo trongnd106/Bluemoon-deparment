@@ -31,7 +31,7 @@
 Execute the following commands to launch frontend interface
 
 ```bash
-cd department-manager-frontend
+cd frontend
 npm install
 npm start
 ```
@@ -41,7 +41,7 @@ npm start
 Execute the following commands to launch backend server
 
 ```bash
-cd department-manager-backend
+cd backend
 mvn install
 mvn spring-boot:run
 ```
