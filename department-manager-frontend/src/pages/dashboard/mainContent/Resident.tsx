@@ -13,7 +13,7 @@ export default function Residents() {
       <Row type="horizontal">
         <Heading as="h1">Residents Management</Heading>
         <AddAndSearch title="Add Resident" setKeyword={setKeyword} keyword={keyword}>
-          <ResidentForm />
+          <ResidentForm resident={null} />
         </AddAndSearch>
       </Row>
       <ResidentsTable keyword={keyword} />

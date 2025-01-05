@@ -17,7 +17,7 @@ export default function ResidentsTable({ keyword }: ResidentsTableProps) {
   const apiResidents = async (page: number = 1) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/residents?size=10&page=${page}&filter=name~'${keyword}'`
+        `http://localhost:8080/api/v1/residents/all?size=10&page=${page}&filter=name~'${keyword}'`
       );
       setResidents(response.data.data.result);
       setTotalPages(response.data.data.totalPages);

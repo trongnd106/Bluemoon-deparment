@@ -12,7 +12,7 @@ export default function ResidentForm(resident: any) {
     id: resident?.id || "",
     name: resident?.name || "",
     dob: resident?.dob || "",
-    apartmentId: resident?.apartmentId || "",
+    addressNumber: resident?.addressNumber || "",
     status: resident?.status || "Resident",
     cic: resident?.cic || "",
     gender: resident?.gender || "",
@@ -36,7 +36,7 @@ export default function ResidentForm(resident: any) {
       id: formValues.id,
       name: formValues.name,
       dob: formValues.dob,
-      apartmentId: formValues.apartmentId,
+      addressNumber: formValues.addressNumber,
       status: formValues.status,
       gender: formValues.gender,
     };
@@ -100,7 +100,7 @@ export default function ResidentForm(resident: any) {
         <Form.Fields>
           <FormField>
             <FormField.Label label={"Room"} />
-            <FormField.Input id="apartmentId" type="search" value={formValues.apartmentId} onChange={handleChange} />
+            <FormField.Input id="addressNumber" type="search" value={formValues.addressNumber} onChange={handleChange} />
           </FormField>
 
           <FormField>
@@ -110,7 +110,7 @@ export default function ResidentForm(resident: any) {
         </Form.Fields>
       </div>
 
-      {resident ? (
+      {resident.id != null ? (
         <Form.Buttons>
           <Button type="button" onClick={handleDelete} variation="danger" size="medium">
             Delete
