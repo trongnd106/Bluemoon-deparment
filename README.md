@@ -5,7 +5,7 @@
 ---
 
 - **Language**: Java, Javascript, Typescript
-- **Framework**: Spring Boot, ReactJS
+- **Framework**: Spring, ReactJS
 - **Build tool**: Maven, Vite
 - **Database**: H2 Database
 - **VCS**: Git
